@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Made by Oscar Freij on April 14 - 2020 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CharlieWing CodeMaker</title>
+
+    <link rel="stylesheet" href="master.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <p>CharlieWing Grid => Creator V1.0 || By Oscar Freij</p>
+    <div id="bottom"></div>
+    <div id="control">
+        <div id="output" class="scrollable">
+            <p id="textOutput"></p>
+        </div>
+        <div id="panel">
+            <div id="createPanel">
+                <p>Width (Start from 0!):<input id="width" type="number" name="width" value="15"></p>
+                <p>Height (Start from 0!):<input id="height" type="number" name="height" value="7"></p>
+                <button onclick="CreateGrid()">Create Grid</button>
+                <button onclick="RemoveGrid()">Remove Grid</button>
+            </div>
+            <div id="savePanel">
+                <p>Frame (0-7):<input id="frame" type="number" name="frame" value="0"></p>
+                <p>Brightness (0-255):<input if="brightness" type="number" name="brightness" value="165"></p>
+                <button onclick="SaveGrid()">Build Code</button>
+                <button onclick="copyStringToClipboard()">Copy Code</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
