@@ -48,8 +48,9 @@ function SaveGrid()
 {
     if(dimY != null && dimX != null)
     {
-        var finalCode = "";
         var frame = document.getElementById("frame").value;
+        var finalCode = "display.fill(0,false,"+frame+")\n";
+
     
         for (let indexY = 0; indexY < globalThis.dimY; indexY++) {
             for (let indexX = 0; indexX < globalThis.dimX; indexX++) {
@@ -57,15 +58,15 @@ function SaveGrid()
                 var led = document.getElementById(indexX+":"+indexY);
     
                 
-                if ( led.style.backgroundColor == "white")
+                if ( led.style.backgroundColor == "red")
                 {
-                    finalCode = finalCode.concat("display.pixel("+indexX+","+indexY+", color=0, blink=None, frame="+frame+")","\n");
-                    //console.log("display.pixel("+indexX+","+indexY+", color=0, blink=None, frame=1)");
+                    finalCode = finalCode.concat("display.pixel("+indexX+","+indexY+", 165, false,"+frame+")","\n");
+                    //console.log("display.pixel("+indexX+","+indexY+", color=165, blink=None, frame=1)");
                 }
                 else
                 {
-                    finalCode = finalCode.concat("display.pixel("+indexX+","+indexY+", color=165, blink=None, frame="+frame+")","\n");
-                    //console.log("display.pixel("+indexX+","+indexY+", color=165, blink=None, frame=1)");
+                    //finalCode = finalCode.concat("display.pixel("+indexX+","+indexY+", color=0, blink=None, frame="+frame+")","\n");
+                    //console.log("display.pixel("+indexX+","+indexY+", color=0, blink=None, frame=1)");
                 }
                 
             }
