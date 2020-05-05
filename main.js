@@ -49,6 +49,7 @@ function SaveGrid()
     if(dimY != null && dimX != null)
     {
         var frame = document.getElementById("frame").value;
+        var brightness = document.getElementById("brightness").value;
         var finalCode = "display.fill(0,false,"+frame+")\n";
 
     
@@ -60,7 +61,7 @@ function SaveGrid()
                 
                 if ( led.style.backgroundColor == "red")
                 {
-                    finalCode = finalCode.concat("display.pixel("+indexX+","+indexY+", 165, false,"+frame+")","\n");
+                    finalCode = finalCode.concat("display.pixel("+indexX+","+indexY+", "+brightness+", False,"+frame+")","\n");
                     //console.log("display.pixel("+indexX+","+indexY+", color=165, blink=None, frame=1)");
                 }
                 else
